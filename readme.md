@@ -2,12 +2,12 @@
 
 [![Production Workflow](https://github.com/nadzeyakuzmitch/tech-stack-portal/actions/workflows/prod.yml/badge.svg)](https://github.com/nadzeyakuzmitch/tech-stack-portal/actions/workflows/prod.yml)
 
-* [Production Deployment](https://nadzeyakuzmitch-prod.herokuapp.com/)
+* [Production Deployment](https://tech-stack-portal-prod.herokuapp.com/)
 
 
 [![Development Workflow](https://github.com/nadzeyakuzmitch/tech-stack-portal/actions/workflows/dev.yml/badge.svg)](https://github.com/nadzeyakuzmitch/tech-stack-portal/actions/workflows/dev.yml)
 
-* [Developmental Deployment](https://nadzeyakuzmitch-dev.herokuapp.com/)
+* [Developmental Deployment](https://tech-stack-portal-dev.herokuapp.com/)
 
 ## Setting up CI/CD
 
