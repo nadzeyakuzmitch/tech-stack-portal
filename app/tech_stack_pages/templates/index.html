@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% set active_page = "index" %}
+{% block title %}
+Welcome | TSP
+{% endblock %}
+{% block content %}
+<div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" aria-label="Git" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Docker"></button>
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Flask"></button>
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3" aria-label="CI/CD"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a role="button" href="{{ url_for('tech_stack_pages.show', page="git")}}">
+                <img src="{{ url_for('static', filename='images/git-banner.png') }}" class="d-block w-100" alt="Git banner">
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a role="button" href="{{ url_for('tech_stack_pages.show', page="docker")}}">
+                <img src="{{ url_for('static', filename='images/docker-banner.png') }}" class="d-block w-100" alt="Docker banner">
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a role="button" href="{{ url_for('tech_stack_pages.show', page="flask")}}">
+                <img src="{{ url_for('static', filename='images/flask-banner.png') }}" class="d-block w-100" alt="Flask banner">
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a role="button" href="{{ url_for('tech_stack_pages.show', page="cicd")}}">
+                <img src="{{ url_for('static', filename='images/cicd-banner.png') }}" class="d-block w-100" alt="CI/CD banner">
+            </a>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="container py-4">
+    <h1>Welcome to my Technology Stack information portal!</h1>
+    
+    <p class="mt-3 lead">
+        My name is Nadzeya Kuzmitch, I am currently freshman at NJIT.
+        Throughout my high school and my first semester of the university I was dedicating time to get familiar with various technologies in IT.
+        I've decided to dedicate my career to the web development path because from the coding standpoint web development is more appealing to me.
+    </p>
+
+    <p class="lead">
+        In Fall 2021 semester I had a subject were we learned basics of the website development. In Spring 2022 I took a class (IS 218) which digs more into webdev.
+    </p>
+    
+    <p class="lead">
+        These are technologies that I've got familiar with which I will discuss on this portal.
+    </p>
+
+    <div class="d-flex align-items-stretch justify-content-between mb-3">
+        <div class="card">
+            <div class="card-body d-flex flex-column align-items-center">
+                <img class="me-3" height="100px" src="{{ url_for('static', filename='images/git-icon.png') }}" alt="Git logo">
+                <div class="d-flex flex-column">
+                    <h3>Git</h3>
+                    <a href="{{ url_for('tech_stack_pages.show', page="git")}}" class="text-decoration-none text-secondary stretched-link lead">Version control management</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body d-flex flex-column align-items-center">
+                <img class="me-3" height="100px" src="{{ url_for('static', filename='images/docker-icon.png') }}" alt="Docker logo">
+                <div class="d-flex flex-column">
+                    <h3>Docker</h3>
+                    <a href="{{ url_for('tech_stack_pages.show', page="docker")}}" class="text-decoration-none text-secondary stretched-link lead">Developing, shipping, running</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body d-flex flex-column align-items-center">
+                <img class="me-3" height="100px" src="{{ url_for('static', filename='images/flask-icon.png') }}" alt="Flask logo">
+                <div class="d-flex flex-column">
+                    <h3>Flask</h3>
+                    <a href="{{ url_for('tech_stack_pages.show', page="flask")}}" class="text-decoration-none text-secondary stretched-link lead">Create simple web applications</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body d-flex flex-column align-items-center">
+                <img class="me-3" height="100px" src="{{ url_for('static', filename='images/cicd-icon.png') }}" alt="CI/CD logo">
+                <div class="d-flex flex-column">
+                    <h3>CI/CD</h3>
+                    <a href="{{ url_for('tech_stack_pages.show', page="cicd")}}" class="text-decoration-none text-secondary stretched-link lead">Continuous integration and delivery</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="lead">
+        Feel free to navigate around the website to check out my notes and quotes from the helpfull resources about that stack of technologies.
+    </p>
+</div>
+{% endblock %}

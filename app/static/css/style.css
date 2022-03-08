@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.no-padding-container {
+    padding: 0 !important;
+}
+
+.structure-list {
+    list-style-type: disc;
+}
+
+.structure-list * {
+    list-style-type: disc;
+}
+
+.structure-list li {
+    font-style: italic;
+}
+
+.structure-list li.folder span {
+    font-style: normal;
+    font-weight: bold;
+}
+
+.structure-comment {
+    font-style: normal;
+    font-weight: normal !important;
+}

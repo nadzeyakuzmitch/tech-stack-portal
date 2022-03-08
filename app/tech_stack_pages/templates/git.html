@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% set active_page = "git" %}
+{% block title %}
+Git | TSP
+{% endblock %}
+{% block content %}
+<img src="{{ url_for('static', filename='images/git-banner.png') }}" class="d-block w-100" alt="Git banner">
+
+<div class="container py-4">
+    <h1>Git</h1>
+    
+    <p class="mt-3 lead">
+        Git is a tool to manage and control project versions. It allows us to circle back on the various stages of our code development project as well as share our project in repos.
+    </p>
+
+    <p class="lead">
+        Here I will provide some highlights on the most popular Git use cases.
+    </p>
+
+    <div class="d-flex flex-column align-items-start">
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Branch</h3>
+                    <a href="https://git-scm.com/docs/git-branch" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        During the development version control and management Git provides an ability to create branches.
+                        Branches act like an alternative path from the specific point of your code history.
+                        You can create new branch which will deviate you from the state of your code allowing to apply new changes while preserving the old code.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Merge</h3>
+                    <a href="https://git-scm.com/docs/git-merge" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        When you create a new branch you can apply new changes to the code. 
+                        However if you want to finalize your change and apply it to your main code, you can use merge.
+                        Merge applies your new changes to the main branch while preserving whatever changes were made to it by other merges.
+                        It is possible to face a merge conflict which happens when two same point of your code were edited simultaneously.
+                        You can resolve the conflict by manually applying necessary changes.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Commit</h3>
+                    <a href="https://git-scm.com/docs/git-commit" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Commit is what actually creates states of your code during development. It's like a quick save button for your code.
+                        Commit will create a record for the current changes in the project with a comment that you can provide.
+                        Later you can review your commits and even roll back to the ones you might need.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Tags</h3>
+                    <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Tags allow us to mark specific significant points in the history of our changes.
+                        This is an additional label other than a comment which can distinguish specific points in the history which might be important for the future reference.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Repositories</h3>
+                    <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Git Repository is a place where you initialize version tracking and management.
+                        It's usually a folder with your project on your local machine.
+                        Repositories can also be remote, allowing you to push your local code to it to later be able to download it.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="lead">
+        Feel free to click on the boxes to navigate to the official documentation.
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% set active_page = "docker" %}
+{% block title %}
+    Docker | TSP
+{% endblock %}
+{% block content %}
+<img src="{{ url_for('static', filename='images/docker-banner.png') }}" class="d-block w-100" alt="Docker banner">
+
+<div class="container py-4">
+    <h1>Docker</h1>
+    
+    <p class="mt-3 lead">
+        Docker is a helpfull tool in terms of running and deploying your application with pre-packaged configuration.
+    </p>
+
+    <p class="lead">
+        Here I will provide some highlights on Docker.
+    </p>
+
+    <div class="d-flex flex-column align-items-start">
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Container</h3>
+                    <a href="https://www.docker.com/resources/what-container" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Docker container is a unit which contains an app to run as well as app's configuration and enviroment configuration as well.
+                        It allows to run the app on the machine by using prepackaged configuration.
+                        The main difference from running the apps on separate virtual machines is the fact that you can create separate containers for the separate apps while they all sharing the same virtual machine.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Image</h3>
+                    <a href="https://searchitoperations.techtarget.com/definition/Docker-image" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Image is what actually makes up a container. 
+                        It is a package that contains all of the configuration with the app that then is being used to create a container to run.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Docker commands</h3>
+                    <a href="https://docs.docker.com/engine/reference/run/" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Here I would like to list the main commands we were using during the class projects.
+                        <ul>
+                            <li>
+                                docker build - allows us to build an imagine from a Dockerfile
+                            </li>
+                            <li>
+                                docker commit - allows us to build an imagine from a container's changes
+                            </li>
+                            <li>
+                                docker run - allows us to run our docker image
+                            </li>
+                            <li>
+                                docker compose - allows us to define and run multi-container application
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Start project and access container</h3>
+                    <a href="https://docs.docker.com/get-started/" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        To start project you need to execue docker run command. You also need to provide configuration like port mapping, working directory and other.
+                        To access container you can follow the address of the machine you are running it on with the port that you've mapped your project to.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>My repository</h3>
+                    <a href="https://dashboard.heroku.com/apps/nadzeyakuzmitch-flaskapp" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        By clicking on this block you can navigate to my Heroku repository for this website.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="lead">
+        Feel free to click on the boxes to navigate to the additional references.
+    </p>
+</div>
+{% endblock %}

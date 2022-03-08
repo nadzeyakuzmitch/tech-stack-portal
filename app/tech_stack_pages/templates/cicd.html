@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% set active_page = "cicd" %}
+{% block title %}
+    CI / CD | TSP
+{% endblock %}
+{% block content %}
+<img src="{{ url_for('static', filename='images/cicd-banner.png') }}" class="d-block w-100" alt="CI/CD banner">
+
+<div class="container py-4">
+    <h1>Continuous Integration and Deployment</h1>
+    
+    <p class="mt-3 lead">
+        Continuous Integration and Deployment (aka DevOps) are the principles which are now commonly used in the modern development.
+        When team is working on a complex application and where tasks are spread between developers sometimes it's crucial to be able to test multiple tasks against each other.
+        Therefore teams are in need of a solution to continuously integrate they changes and also being able to deploy it to the enviroments as seamlessly as possible.
+    </p>
+
+    <p class="lead mb-1">
+        This is where CI / CD come in handy.<br>
+        CI - continuous integration is
+    </p>
+
+    <blockquote class="blockquote">
+        <p>...a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day.</p>
+        <footer class="blockquote-footer">Martin Fowler in <cite title="Continuous Integration">Continuous Integration</cite></footer>
+    </blockquote>
+
+    
+    <p class="lead mb-1">
+        CD - continuous deployment is
+    </p>
+
+    <blockquote class="blockquote">
+        <p>...a software development discipline where you build software in such a way that the software can be released to production at any time.</p>
+        <footer class="blockquote-footer">Martin Fowler in <cite title="Continuous Delivery">Continuous Delivery</cite></footer>
+    </blockquote>
+
+    <p class="lead">
+        In our application we use GitHub to organize CI/CD process via GitHub Actions.
+        This allows us to configurate automatic deployments of our code to our enviroments like DEV and PROD.
+        In GitHub we configure each pull request code to be deployed to the DEV enviroment so we are able to test it before approving the pull request.
+        After the testing and pull request approval our code is getting deployed to the PROD enviroment.
+        This allows us to solely concentrate on the development process rather then managing the code merges.
+    </p>
+
+    <p class="lead">
+        <a class="link-primary" href="https://www.martinfowler.com/articles/continuousIntegration.html" target="_blank">Check out the article about Continuous Integration</a><br>
+        <a class="link-primary" href="https://www.martinfowler.com/bliki/ContinuousDelivery.html" target="_blank">Check out the article about Continuous Delivery</a><br>
+        <a class="link-primary" href="https://docs.github.com/en/actions" target="_blank">Check out the GitHub Actions page</a><br>
+    </p>
+</div>
+{% endblock %}
