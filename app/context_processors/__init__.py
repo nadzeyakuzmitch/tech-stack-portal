@@ -5,7 +5,7 @@ import datetime
 def utility_text_processors():
 
     def deployment_environment():
-        return getenv('FLASK_ENV', None)
+        return getenv('INPUT_FLASK_ENV', None)
 
     def current_year():
         currentDateTime = datetime.datetime.now()
