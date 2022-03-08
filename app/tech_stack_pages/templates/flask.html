@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% set active_page = "flask" %}
+{% block title %}
+    Flask | TSP
+{% endblock %}
+{% block content %}
+<img src="{{ url_for('static', filename='images/flask-banner.png') }}" class="d-block w-100" alt="Flask banner">
+
+<div class="container py-4">
+    <h1>Flask</h1>
+    
+    <p class="mt-3 lead">
+        Flask is a helpfull Python library which allows us to create front-end applications.
+    </p>
+
+    <p class="lead">
+        Here I will provide some highlights on creating and testing Flask app.
+    </p>
+
+    <div class="d-flex flex-column align-items-start">
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Creating pages</h3>
+                    <a href="https://flask.palletsprojects.com/en/2.0.x/quickstart/" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        You have multiple ways to create your pages. Flask allows us to configure paths of the app to perform specific actions based on what path you follow.
+                        You can display text content for the path.
+                        You can also display HTML content multiple ways: by writing HTML code inline or using HTML page templates for bigger projects.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Testing pages</h3>
+                    <a href="https://docs.pytest.org/en/7.0.x/" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        After creating your website you can write tests to ensure your application runs properly.
+                        We can do it using Pytest. It allows to configure context variable and other parameters and then check on the state of the page.
+                        We can test for the correct page status, assert specific text or HTML value and various other methods.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Project outline</h3>
+                    <a href="https://github.com/nadzeyakuzmitch/tech-stack-portal" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        This is my project structure.
+                        <ul class="structure-list">
+                            <li class="folder">
+                                <span>.github <span class="structure-comment">- GitHub configuration folder</span></span>
+                                <ul>
+                                    <li class="folder">
+                                        <span>workflows <span class="structure-comment">- GitHub workflow configuration folder</span></span>
+                                        <ul>
+                                            <li>dev.yml <span class="structure-comment">- dev enviroment config</span></li>
+                                            <li>heroku_awake.yml <span class="structure-comment">- Heroku config</span></li>
+                                            <li>prod.yml <span class="structure-comment">- prod enviroment config</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="folder">
+                                <span>app <span class="structure-comment">- Flask app folder</span></span>
+                                <ul>
+                                    <li class="folder">
+                                        <span>context_processors <span class="structure-comment">- context processprs folder</span></span>
+                                        <ul>
+                                            <li>__init__.py <span class="structure-comment">- context init file</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="folder">
+                                        <span>static <span class="structure-comment">- static files folder for flask app</span></span>
+                                        <ul>
+                                            <li class="folder">
+                                                <span>css <span class="structure-comment">- CSS styles folder</span></span>
+                                                <ul>
+                                                    <li>style.css <span class="structure-comment">- main CSS styles file</span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="folder">
+                                                <span>images <span class="structure-comment">- images folder</span></span>
+                                                <ul>
+                                                    <li>cicd-banner.png <span class="structure-comment">- banner image</span></li>
+                                                    <li>cicd-icon.png <span class="structure-comment">- icon image</span></li>
+                                                    <li>docker-banner.png <span class="structure-comment">- banner image</span></li>
+                                                    <li>docker-icon.png <span class="structure-comment">- icon image</span></li>
+                                                    <li>favicon.ico <span class="structure-comment">- webbsite icon image</span></li>
+                                                    <li>flask-banner.png <span class="structure-comment">- banner image</span></li>
+                                                    <li>flask-icon.png <span class="structure-comment">- icon image</span></li>
+                                                    <li>git-banner.png <span class="structure-comment">- banner image</span></li>
+                                                    <li>git-icon.png <span class="structure-comment">- icon image</span></li>
+                                                    <li>icon.png <span class="structure-comment">- full sized website icon image</span></li>
+                                                </ul>
+                                            </li>
+                                            <li class="folder">
+                                                <span>js <span class="structure-comment">- JS files folder</span></span>
+                                                <ul>
+                                                    <li>scripts.js <span class="structure-comment">- main JS file</span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="folder">
+                                        <span>tech_stack_pages <span class="structure-comment">- template pages for the app</span></span>
+                                        <ul>
+                                            <li class="folder">
+                                                <span>templates <span class="structure-comment">- pages templates folder</span></span>
+                                                <ul>
+                                                    <li>cicd.html <span class="structure-comment">- CI/CD page</span></li>
+                                                    <li>docker.html <span class="structure-comment">- Docker page</span></li>
+                                                    <li>flask.html <span class="structure-comment">- Flask page</span></li>
+                                                    <li>git.html <span class="structure-comment">- Git page</span></li>
+                                                    <li>index.html <span class="structure-comment">- Main page</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>__init__.py <span class="structure-comment">- init file for the template pages</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="folder">
+                                        <span>templates <span class="structure-comment">- main templates folder</span></span>
+                                        <ul>
+                                            <li>base.html <span class="structure-comment">- main app template</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>run.py <span class="structure-comment">- app run file</span></li>
+                                    <li>__init__.py <span class="structure-comment">- app init file</span></li>
+                                </ul>
+                            </li>
+                            <li class="folder">
+                                <span>tests <span class="structure-comment">- tests folder</span></span>
+                                <ul>
+                                    <li>conftest.py <span class="structure-comment">- app test file</span></li>
+                                    <li>context_process_test.py <span class="structure-comment">- context test file</span></li>
+                                    <li>tech_stack_pages_test.py <span class="structure-comment">- pages test file</span></li>
+                                    <li>__init__.py <span class="structure-comment">- tests init file</span></li>
+                                </ul>
+                            </li>
+                            <li>.coverage <span class="structure-comment"></span></li>
+                            <li>.coveragerc <span class="structure-comment"></span></li>
+                            <li>.dockerignore <span class="structure-comment">- ignore file for Docker</span></li>
+                            <li>.gitignore <span class="structure-comment">- ignore file for Git</span></li>
+                            <li>.pylintrc <span class="structure-comment"></span></li>
+                            <li>docker-compose.yml <span class="structure-comment">- Docker compose config</span></li>
+                            <li>Dockerfile <span class="structure-comment">- main Dockerfile</span></li>
+                            <li>heroku.yml <span class="structure-comment">- Heroku config</span></li>
+                            <li>pytest.ini <span class="structure-comment"></span></li>
+                            <li>readme.md <span class="structure-comment">- Readme.MD file</span></li>
+                            <li>requirements.txt <span class="structure-comment">- requirements file for Python install</span></li>
+                            <li>setup.py <span class="structure-comment"></span></li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="lead">
+        Feel free to click on the boxes to navigate to the additional references.<br>
+        <a class="link-primary" href="https://github.com/nadzeyakuzmitch/tech-stack-portal" target="_blank">Check out my repository with Flask app</a><br>
+        <a class="link-primary" href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank">Check out Flask documentation</a><br>
+        <a class="link-primary" href="https://flask.palletsprojects.com/en/2.0.x/blueprints/" target="_blank">Check out Flask Blueprint documentation</a><br>
+        <a class="link-primary" href="https://docs.pytest.org/en/7.0.x/" target="_blank">Check out Flask testing with Pytest</a>
+    </p>
+</div>
+{% endblock %}
