@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: mikeesto/heroku-awake@1.0.0
         with:
-          URL: "https://nadzeyakuzmitch-prod.herokuapp.com/"
+          URL: "https://tech-stack-portal-prod.herokuapp.com/"
 
   keep_dev_awake:
     runs-on: ubuntu-latest
@@ -19,4 +19,4 @@ jobs:
     steps:
       - uses: mikeesto/heroku-awake@1.0.0
         with:
-          URL: "https://nadzeyakuzmitch-prod.herokuapp.com/"
+          URL: "https://tech-stack-portal-dev.herokuapp.com/"
