@@ -5,6 +5,9 @@ on:
     branches:
       - 'master'
 
+env:
+  FLASK_ENV: development
+
 jobs:
   run_pytest:
     runs-on: ubuntu-latest
