@@ -10,9 +10,6 @@ on:
 env:
   FLASK_ENV: profnduction
 
-inputs: 
-  flask_env: prudctioninput
-
 jobs:
   runtest:
     runs-on: ubuntu-latest

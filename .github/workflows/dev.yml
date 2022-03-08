@@ -8,9 +8,6 @@ on:
 env:
   FLASK_ENV: devinggg
 
-inputs: 
-  flask_env: pdevvvdctioninput
-
 jobs:
   run_pytest:
     runs-on: ubuntu-latest
