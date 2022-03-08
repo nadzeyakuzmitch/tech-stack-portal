@@ -7,9 +7,6 @@ on:
     tags:
       - 'v*'
 
-env:
-  FLASK_ENV: profnduction
-
 jobs:
   runtest:
     runs-on: ubuntu-latest
@@ -57,7 +54,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
-          flask_env: "production"
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "tech-stack-portal-prod" #Must be unique in Heroku
           heroku_email: "nk83@njit.edu"
