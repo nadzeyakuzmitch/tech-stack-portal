@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% set active_page = "oop" %}
+{% set active_menu = "project_2" %}
+{% block title %}
+    OOP stuff
+{% endblock %}
+{% block content %}
+<img src="{{ url_for('static', filename='images/oop-banner.png') }}" class="d-block w-100" alt="OOP banner">
+
+<div class="container py-4">
+    <h1>OOP theory and principles</h1>
+    
+    <p class="mt-3 lead">
+        Abstraction in a calculator projects hides unnecessary details, only showing relevant information for the user. The idea of encapsulation is to keep classes separated and prevent them from having tightly coupled with each other. Encapsulation keeps the data and the code safe from external interface. By using inheritance you can acquire some properties of another object. Convention denotes the new class as child class, and the one that it inherits from is called parent class or superclass. Polymorphism can be implemented by designing a generic interface, which provides generic methods for a certain class of action and there can be multiple classes, which provides the implementation of these generic methods.
+    </p>
+
+    <img src="{{ url_for('static', filename='images/oop-image-1.png') }}" class="d-block w-75 mx-auto" alt="OOP illustration">
+
+    <p class="mt-3 lead">
+        In this video you can see the difference between OOP and FP programming:
+    </p>
+
+    <div class="w-100 d-flex align-items-center justify-content-center">
+        <iframe width="720" height="480" src="https://www.youtube.com/embed/08CWw_VD45w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <p class="lead mt-3">
+        <a class="link-primary" href="https://www.nerd.vision/post/polymorphism-encapsulation-data-abstraction-and-inheritance-in-object-oriented-programming" target="_blank">Check out the article about OOP</a><br>
+    </p>
+</div>
+{% endblock %}
