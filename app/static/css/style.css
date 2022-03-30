@@ -28,3 +28,7 @@
     font-style: normal;
     font-weight: normal !important;
 }
+
+.cards-container .card {
+    flex: 1;
+ }

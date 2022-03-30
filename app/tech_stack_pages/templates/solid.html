@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% set active_page = "solid" %}
+{% set active_menu = "project_2" %}
+{% block title %}
+    SOLID
+{% endblock %}
+{% block content %}
+<img src="{{ url_for('static', filename='images/solid-banner.png') }}" class="d-block w-100" alt="Solid banner">
+
+<div class="container py-4">
+    <h1>SOLID theory of design patterns</h1>
+
+    <p class="mt-3 lead">
+        In this article I would like to discuss SOLID theory of design patterns.
+    </p>
+
+    <div class="d-flex flex-column align-items-start">
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h1>S</h1>
+                    <a class="text-decoration-none text-secondary stretched-link lead">
+                        Let's start with the principle of single responsibility. This principle states that a class should only have one duty, as one might assume. It should also only have one reason to alter. Testing - a single-responsibility class will have considerably fewer test cases than a multi-responsibility class.        
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h1>O</h1>
+                    <a class="text-decoration-none text-secondary stretched-link lead">
+                        The O, often known as the open-closed principle, is currently in play. To put it another way, classes can be extended but not modified. By doing so, we avoid altering old code and perhaps introducing new issues into an otherwise stable program.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h1>L</h1>
+                    <a class="text-decoration-none text-secondary stretched-link lead">
+                        The next principle is Liskov substitution, which is the most difficult of the five. Simply said, if class A is a subtype of class B, we should be able to substitute A for B without affecting the program's behavior.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h1>I</h1>
+                    <a class="text-decoration-none text-secondary stretched-link lead">
+                        Interface segregation is the I in SOLID, and it essentially indicates that bigger interfaces should be divided into smaller ones. We can ensure that implementing classes only have to worry about the methods that are relevant to them by doing so.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h1>D</h1>
+                    <a class="text-decoration-none text-secondary stretched-link lead">
+                        The decoupling of software modules is referred to as the dependency inversion principle. Rather than low-level modules relying on high-level modules, both will rely on abstractions.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="lead mt-2">
+        Object creation is delegated to the factory class, which hides the creation mechanism. Rather than invoking object creation directly, the client requests the factory class for a specific object of type x. The factory pattern determines which object to build and return based on the type.
+    </p>
+
+    <p class="lead">
+        <a class="link-primary" href="https://www.c-sharpcorner.com/article/solid-design-principles-simplified-with-uml/" target="_blank">Check out the article about SOLID</a><br>
+        <a class="link-primary" href="https://www.oreilly.com/library/view/head-first-design/0596007124/ch04.html" target="_blank">Check out the article about factory pattern</a><br>
+    </p>
+</div>
+{% endblock %}

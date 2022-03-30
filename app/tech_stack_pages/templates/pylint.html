@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% set active_page = "pylint" %}
+{% set active_menu = "project_2" %}
+{% block title %}
+    Pylint & Others
+{% endblock %}
+{% block content %}
+<img src="{{ url_for('static', filename='images/pylint-banner.png') }}" class="d-block w-100" alt="Pylint banner">
+
+<div class="container py-4">
+    <h1>Pylint and other theory</h1>
+
+    <p class="mt-3 lead">
+        On this page you can learn more about various important terms which are crucial in the design and development process (click in the card to learn more/view the source).
+    </p>
+
+    <div class="d-flex flex-column align-items-start">
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Pylint</h3>
+                    <a href="https://en.wikipedia.org/wiki/Pylint" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Pylint is a source-code, bug and quality checker for the Python programming language. It is named following a common convention in Python of a "py" prefix, and a nod to the C programming lint program. It follows the style recommended by PEP 8, the Python style guide.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Instantiation</h3>
+                    <a href="https://www.crondose.com/2016/07/what-does-instantiation-mean/" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Instantiation is the process of creating an actual instance or specific manifestation of an abstraction or template, such as a class of objects or a computer process, in programming. To instantiate is to make such an instance by specifying one specific variation of an object within a class, giving it a name, and putting it in a physical location.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Object</h3>
+                    <a href="https://techterms.com/definition/object" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        The object can be a collection of variables, functions, and data structures in the object-oriented programming paradigm; in class-based variations of the paradigm, it refers to a specific instance of a class.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Class</h3>
+                    <a href="https://brilliant.org/wiki/classes-oop/#:~:text=In%20object%2Doriented%20programming%2C%20a,created%20using%20the%20class%20keyword" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        A class is a blueprint for constructing objects (a specific data structure), setting starting values for state (member variables or attributes), and implementing behavior in object-oriented programming (member functions or methods).
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Namespace</h3>
+                    <a href="https://docs.microsoft.com/en-us/cpp/cpp/namespaces-cpp?view=msvc-170#using_directives" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        A namespace is a declarative zone that gives the identifiers (names of types, functions, variables, and so on) within it a scope. Namespaces are used to arrange code into logical categories and to avoid name clashes, which might happen when you have many libraries in your code base.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Constructor</h3>
+                    <a href="https://www.geeksforgeeks.org/constructors-c/" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        In object-oriented programming, a constructor is a particular method of a class or structure that initializes a newly formed object of that kind. The constructor is automatically invoked whenever an object is created. A constructor is similar to an instance method in that it can be used to set the values of an object's members to default or user-defined values. It normally has the same name as the class.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Fixture</h3>
+                    <a href="https://docs.pytest.org/en/7.1.x/explanation/fixtures.html" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        For the tests, a fixture provides a defined, dependable, and consistent context. This could include things like the setting or the content. Fixtures describe the stages and data that make up a test's organized phase. They are functions you define in pytest that serve this purpose. They can also be used to specify the active phase of a test.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Type hinting</h3>
+                    <a href="https://symfonycasts.com/screencast/oo/type-hinting" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        The term type hinting refers to instructing functions to accept only the specified data type. In a more technical sense, Type Hinting is a technique for forcing a function to accept a specific data type.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Typecasting</h3>
+                    <a href="https://www.programiz.com/java-programming/typecasting" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Typecasting is the process of converting an object from one data type to another. It is used in computer programming to ensure that a function correctly handles variables. The transformation of an integer into a string is an example of typecasting.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Unit testing</h3>
+                    <a href="https://homes.cs.aau.dk/~normark/oop-csharp/html/notes/test_themes-oop-unit-test-sect.html#test_unit-testing_title_1" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Unit testing ensures that each component of a program functions appropriately in isolation. Before a unit is merged with other units, it should be tested to ensure that it behaves correctly.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Static functions</h3>
+                    <a href="https://beginnersbook.com/2013/05/static-vs-non-static-methods/" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Static functions are advantageous because they do not require an instantiated member of the class to which they are associated. Static functions can provide functionality for a class without needing the programmer to create an instance of the class first.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Instance method</h3>
+                    <a href="http://www.cs.ecu.edu/karl/3200/fall15/Notes/Java/Class/method.html#:~:text=An%20instance%20method%20is%20a,their%20names%2C%20without%20a%20dot" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        A method that belongs to instances of a class rather than the class itself is known as an instance method. Simply leave static out of the method heading to define an instance method. You refer to variables and methods in the class by their names, without a dot, in the method specification.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Properties</h3>
+                    <a href="https://www.seniorcare2share.com/what-is-a-property-in-oop/" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Properties or features are qualities or features that define a class. While classes are collections of things, an instance is a single object that belongs to a given class.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Static method</h3>
+                    <a href="https://www.php.net/manual/en/language.oop5.static.php#:~:text=Static%20properties%20are%20accessed%20using,self%20%2C%20parent%20and%20static%20" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        A static method is one that belongs to a class rather than to a specific instance of that class. A method can be accessed by any instance of a class, whereas methods defined in an instance can only be accessed by that class's object.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Static properties</h3>
+                    <a href="https://www.w3schools.com/php/php_oop_static_properties.asp" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Static properties can be accessed without having to create a class instance. The static keyword is used to declare static properties.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Encapsulation</h3>
+                    <a href="https://stackify.com/oop-concept-for-beginners-what-is-encapsulation/" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        One of the core principles in object-oriented programming is encapsulation (OOP). Let's have a look at how it's done and look at some instances. Encapsulation, like a class in Java, is defined as the idea of bundling data and functions that work on that data into a single unit. This idea is also frequently used to conceal an object's internal representation or state from the outside world. This is known as information concealment.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Inheritance</h3>
+                    <a href="https://www.analyticsvidhya.com/blog/2020/10/inheritance-object-oriented-programming/#:~:text=super()%20function-,What%20is%20Inheritance%20in%20Object%20Oriented%20Programming%3F,known%20as%20the%20Parent%20class" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        The mechanism by which one class inherits the characteristics and methods of another class is known as inheritance. The Parent class is the one whose attributes and methods are inherited.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Polymorphism</h3>
+                    <a href="https://stackify.com/oop-concept-polymorphism/#:~:text=Polymorphism%20is%20one%20of%20the,types%20through%20the%20same%20interface" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Polymorphism is a basic notion in object-oriented programming (OOP) that describes instances when something appears in several forms. It is a concept in computer science that you can access objects of various types through the same interface. This interface can be implemented in a variety of ways by each type.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Abstraction</h3>
+                    <a href="https://stackify.com/oop-concept-abstraction/#:~:text=Abstraction%20in%20OOP,to%20trigger%20a%20specific%20operation" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        In an OOP language, objects provide an abstraction that hides the implementation details on the inside. You only need to know which methods of the object are available to call and which input parameters are required to start a given function, exactly like the coffee maker in your kitchen.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>SOLID</h3>
+                    <a href="https://medium.com/swlh/solid-principles-of-oop-c24bd6ccde77#:~:text=The%20SOLID%20principles%20of%20OOP%20are%3A%20Single%20Responsibility%20Principle%2C%20Open,testable%2C%20scalable%2C%20and%20maintainable" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        Single Responsibility Principle, Open-Closed Principle, Liskov Substitution Principle (LSP), Interface Segregation Principle (ISP), and Dependency Inversion Principle are the SOLID principles of OOP (DIP). OOP applications are legible, testable, scalable, and manageable thanks to the SOLID principles.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <h3>Design pattern</h3>
+                    <a href="https://madasamy.medium.com/introduction-to-object-oriented-design-patterns-part-i-4e5c7845015b#:~:text=In%20software%20engineering%2C%20a%20design,used%20in%20many%20different%20situations" target="_blank" class="text-decoration-none text-secondary stretched-link lead">
+                        A design pattern is a generic repeatable solution to a typically occurring problem in software design in software engineering. A design pattern isn't a finished design that can be turned into code right away. It's a description or template for solving an issue that may be applied to a variety of scenarios.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

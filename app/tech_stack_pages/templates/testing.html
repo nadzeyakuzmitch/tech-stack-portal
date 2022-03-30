@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% set active_page = "testing" %}
+{% set active_menu = "project_2" %}
+{% block title %}
+    AAA Testing
+{% endblock %}
+{% block content %}
+<img src="{{ url_for('static', filename='images/testing-banner.png') }}" class="d-block w-100" alt="Testing banner">
+
+<div class="container py-4">
+    <h1>AAA testing concepts</h1>
+    
+    <p class="mt-3 lead">
+        A unit test is a technique that instantiates a small part of our utility and verifies its conduct independently from different parts. A regular unit check consists of three stages: first, it initializes a small piece of a utility it desires to check, then it applies a few stimuli to the machine below check, and finally, it observes the ensuing conduct. If the determined conduct is steady with the expectations, the unit check passes, otherwise, it fails, indicating that there's a hassle someplace withinside the machine below check. These 3 unit check stages also are referred to as Arrange, Act, and Assert, or surely AAA. The advantages of testing consist of stopping bugs, reducing development costs and enhancing performance.
+    </p>
+
+    <img src="{{ url_for('static', filename='images/testing-image-1.png') }}" class="d-block w-75 mx-auto" alt="Testing illustration">
+
+    <p class="lead mt-3">
+        So in the arrange section, you just have the code needed to run that particular test. Objects would be created here, mocks would be put up (if you're using one), and expectations might be defined. Then there's the Act, which is supposed to be the method's invocation. And on Assert, you'd just see if the expectations had been met.
+    </p>
+
+    <p class="lead">
+        <a class="link-primary" href="https://jamescooke.info/arrange-act-assert-pattern-for-python-developers.html" target="_blank">Check out the article about AAA testing in Python</a><br>
+    </p>
+</div>
+{% endblock %}

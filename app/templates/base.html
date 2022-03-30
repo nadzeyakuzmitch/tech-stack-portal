@@ -34,18 +34,44 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link{{ ' active' if active_page == 'index' else '' }}" href="{{ url_for('tech_stack_pages.show', page="index")}}">Home</a>
+                        </li>                  
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle{{ ' active' if active_menu == 'project_1' else '' }}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Technologies (Project 1)
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'git' else '' }}" href="{{ url_for('tech_stack_pages.show', page="git")}}">Git</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'docker' else '' }}" href="{{ url_for('tech_stack_pages.show', page="docker")}}">Docker</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'flask' else '' }}" href="{{ url_for('tech_stack_pages.show', page="flask")}}">Python / Flask</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'cicd' else '' }}" href="{{ url_for('tech_stack_pages.show', page="cicd")}}">CI / CD</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link{{ ' active' if active_page == 'git' else '' }}" href="{{ url_for('tech_stack_pages.show', page="git")}}">Git</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{{ ' active' if active_page == 'docker' else '' }}" href="{{ url_for('tech_stack_pages.show', page="docker")}}">Docker</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{{ ' active' if active_page == 'flask' else '' }}" href="{{ url_for('tech_stack_pages.show', page="flask")}}">Python / Flask</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{{ ' active' if active_page == 'cicd' else '' }}" href="{{ url_for('tech_stack_pages.show', page="cicd")}}">CI / CD</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle{{ ' active' if active_menu == 'project_2' else '' }}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Theory (Project 2)
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'pylint' else '' }}" href="{{ url_for('tech_stack_pages.show', page="pylint")}}">Pylint & Others</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'testing' else '' }}" href="{{ url_for('tech_stack_pages.show', page="testing")}}">AAA Testing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'oop' else '' }}" href="{{ url_for('tech_stack_pages.show', page="oop")}}">OOP</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'solid' else '' }}" href="{{ url_for('tech_stack_pages.show', page="solid")}}">SOLID</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
