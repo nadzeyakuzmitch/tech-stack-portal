@@ -2,6 +2,7 @@ import logging
 from logging.config import dictConfig
 
 import flask
+from app.logging_config.log_formatters import RequestFormatter
 from flask import current_app, request
 
 log_con = flask.Blueprint('log_con', __name__)
