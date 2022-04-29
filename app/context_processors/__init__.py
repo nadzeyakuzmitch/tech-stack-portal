@@ -1,8 +1,12 @@
 """These are reusable template function"""
-from os import getenv
 import datetime
+from os import getenv
+
+from app.auth.forms import login_form
+
 
 def utility_text_processors():
+    form = login_form()
 
     def deployment_environment():
         return getenv('FLASK_ENV', None)
@@ -14,9 +18,7 @@ def utility_text_processors():
         return year
 
     return dict(
+        form=form,
         deployment_environment=deployment_environment(),
         year=current_year()
     )
-
-
-

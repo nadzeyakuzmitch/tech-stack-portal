@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Access Denied 403{% endblock %}
+{% block content %}
+
+<div class="container py-4">
+  <div class="card p-4 mx-auto">
+    <h2>403 <br>Access Denied</h2>
+    <span>
+      <a href="{{ url_for('tech_stack_pages.show', page="index") }}">Click Here</a> to go to the Home Page
+    </span>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% set active_page = "manageProfile" %}
+{% set active_menu = "project_3_auth" %}
+{% block content %}
+{% from 'bootstrap5/form.html' import render_form, render_field, render_form_row %}
+
+<div class="container py-4">
+    <div class="card p-4 mx-auto">
+        <h2>Manage Profile</h2>
+        {{ render_form(form) }}
+    </div>
+</div>
+
+
+{% endblock %}

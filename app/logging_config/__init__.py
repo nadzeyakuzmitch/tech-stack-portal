@@ -4,12 +4,15 @@ from logging.config import dictConfig
 import flask
 from app.logging_config.log_formatters import RequestFormatter
 from flask import current_app, request
+from app.cli import logs_folder_create
 
 log_con = flask.Blueprint('log_con', __name__)
 
 
 @log_con.before_app_first_request
 def configure_logging():
+    logs_folder_create()
+    
     logging.config.dictConfig(LOGGING_CONFIG)
 
     current_app.logger.info("Initial request handler executed")
@@ -35,10 +38,14 @@ def after_request_logging(response):
     elif request.path.startswith('/bootstrap'):
         return response
 
+    if request.method == 'POST' and request.path.__contains__('/songs/upload'):
+        songUploadsLogger = logging.getLogger("songUploads")
+        songUploadsLogger.info("After song upload request handler executed")
+        
     current_app.logger.info("After request handler executed")
 
-    appRequestLogger = logging.getLogger("appRequests")
-    appRequestLogger.info("After request handler executed")
+    appRequestsLogger = logging.getLogger("appRequests")
+    appRequestsLogger.info("After request handler executed")
 
     return response
 
@@ -52,7 +59,7 @@ LOGGING_CONFIG = {
         },
         'RequestFormatter': {
             '()': 'app.logging_config.log_formatters.RequestFormatter',
-            'format': '[%(asctime)s] [%(process)d] %(remote_addr)s requested %(url)s'
+            'format': '[%(asctime)s] [%(process)d] %(remote_addr)s requested %(url)s '
             '%(levelname)s in %(module)s: %(message)s'
         }
     },
@@ -84,6 +91,13 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
+        'file.handler.songUploads': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'RequestFormatter',
+            'filename': 'app/logs/songUploads.log',
+            'maxBytes': 10000000,
+            'backupCount': 5,
+        },
         'file.handler.appErrors': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
@@ -110,6 +124,11 @@ LOGGING_CONFIG = {
         },
         'appRequests': {
             'handlers': ['file.handler.appRequests'],
+            'level': 'INFO',
+            'propagate': False
+        },
+        'songUploads': {
+            'handlers': ['file.handler.songUploads'],
             'level': 'INFO',
             'propagate': False
         }

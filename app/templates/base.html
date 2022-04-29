@@ -20,6 +20,9 @@
 
 <body>
     <header class="container-fluid bg-light">
+        {% from 'bootstrap5/nav.html' import render_nav_item %}
+        {% from 'bootstrap5/utils.html' import render_messages %}
+        {% from 'bootstrap5/form.html' import render_form, render_field, render_form_row %}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="/">Technology Stack Portal</a>
@@ -73,6 +76,66 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle{{ ' active' if active_menu == 'project_3_songs' else '' }}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Songs (Project 3)
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'aboutSongs' else '' }}" href="{{ url_for('auth_pages.about')}}">About Flask Auth and Upload</a>
+                                </li>
+                                
+                                {% if current_user.is_authenticated %}
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'songsDashboard' else '' }}" href="{{ url_for('auth.dashboard')}}">Dashboard</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'mySongs' else '' }}" href="{{ url_for('songs.songs_browse')}}">My Songs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'uploadSongs' else '' }}" href="{{ url_for('songs.songs_upload')}}">Upload Songs</a>
+                                </li>
+                                {% endif %}
+                            </ul>                                
+                        </li>
+                        <li class="nav-item dropdown">
+                            {% if current_user.is_authenticated %}
+                            <a class="nav-link dropdown-toggle{{ ' active' if active_menu == 'project_3_auth' else '' }}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                My Account (Project 3)
+                            </a>
+                            {% else %}
+                            <a class="nav-link dropdown-toggle{{ ' active' if active_menu == 'project_3_auth' else '' }}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Login / Register (Project 3)
+                            </a>
+                            {% endif %}
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">                                
+                                {% if current_user.is_authenticated %}
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'manageProfile' else '' }}" href="{{ url_for('auth.edit_profile')}}">Manage Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'manageAccount' else '' }}" href="{{ url_for('auth.edit_account')}}">Manage Account</a>
+                                </li>
+                                {% if current_user.is_admin %}
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'usersManagement' else '' }}" href="{{ url_for('auth.browse_users')}}">User Management</a>
+                                </li>
+                                {% endif %}
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'logout' else '' }}" href="{{ url_for('auth.logout')}}">Logout</a>
+                                </li>
+                                {% else %}
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'register' else '' }}" href="{{ url_for('auth.register')}}">Register</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item{{ ' active' if active_page == 'login' else '' }}" href="{{ url_for('auth.login')}}">Login</a>
+                                </li>
+                                {% endif %}
+                            </ul>                                
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -82,6 +145,10 @@
         {% block content %}
         {% endblock %}
     </section>
+    <div class="mb-5 container-fluid bg-light">
+        {{ render_messages() }}
+    </div>
+    
     <footer class="container-fluid text-center text-light bg-secondary py-2">
         Environment: {{ deployment_environment }} - Copyright: Nadzeya Kuzmitch {{ year }}
     </footer>
@@ -93,5 +160,3 @@
 </body>
 
 </html>
-
-<!-- Making small change to trigger deployment -->

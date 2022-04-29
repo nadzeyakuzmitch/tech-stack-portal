@@ -31,4 +31,24 @@
 
 .cards-container .card {
     flex: 1;
- }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.dataTables_filter, .dataTables_length {
+    display: flex;
+    align-items: center;
+}
+
+.dataTables_filter label, .dataTables_length label {
+    display: flex;
+    align-items: center;
+}
+
+.dataTables_filter input, .dataTables_length select {
+    margin-left: 1em;
+    margin-right: 1em;
+}
